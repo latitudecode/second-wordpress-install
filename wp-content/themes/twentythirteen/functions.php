@@ -526,7 +526,6 @@ function twentythirteen_customize_preview_js() {
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
 
 
-
 /**
  * added this code to create a custom post type
  *
@@ -538,23 +537,32 @@ function prowp_register_my_post_types() {
 	register_post_type( 'products',
 		array(
 			'labels' => array(
-				'name' => 'Products'
+				'name' => 'Products',
+				'singular_name' => 'Product',
+				'add_new' => 'Add New Product',
+				'add_new_item' => 'Add New Product',
+				'edit_item' => 'Edit Product',
+				'new_item' => 'New Product',
+				'all_items' => 'All Products',
+				'view_item' => 'View Product',
+				'search_items' => 'Search Products',
+				'not_found' => 'No products found',
+				'not_found_in_trash' => 'No products found in trash',
+				'parent_item_colon' => '',
+				'menu_name' => 'Products',
 				),
 				'public' => true,
 				
 			)
 		);
+
+
 }
 
-
-
-
-
-
-
-
-
-
+/**
+ * adding labels to my custom post type
+ *
+ */
 
 
 
