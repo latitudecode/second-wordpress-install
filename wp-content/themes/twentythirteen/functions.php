@@ -524,3 +524,46 @@ function twentythirteen_customize_preview_js() {
 	wp_enqueue_script( 'twentythirteen-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
 }
 add_action( 'customize_preview_init', 'twentythirteen_customize_preview_js' );
+
+/**
+ * This is code for creating a custom post type for 'products'
+ * 
+ *
+ */
+
+<?php
+add_action( 'init', 'prowp_register_my_post_types' );
+	function prowp_register_my_post_types() {
+
+		register_post_type( 'products',
+			array(
+				'labels' => array (
+						'name' => 'Products'
+					),
+					'public' => true,
+				)
+			);
+
+	}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
